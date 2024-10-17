@@ -67,7 +67,9 @@ function checkMatch() {
     } else {
         openCards[0].classList.remove("boxOpen");
         openCards[1].classList.remove("boxOpen");
-        score -= 2;
+        if (score > 0) {  
+            score -= 2;
+        }
     }
 
     document.querySelector("#score").textContent = score;
